@@ -49,7 +49,7 @@ export default function App() {
 npm run dev
 ```
 
-## working on pages and routes
+## work on pages and routes
 
 creating pages like Home, About, Signin etc
 
@@ -61,7 +61,7 @@ created header component
 install mongoose and setup the db
 created .env file, setup connection string there
 
-## creating model
+## create model
 
 ```
 import mongoose, { Schema } from 'mongoose'
@@ -84,11 +84,13 @@ export default <model-name>;
 
 create model and controller seperately in api folder
 
-## creating signup api route
+## create signup api route
 
 create signup and routes for it.
 index.js 
 auth.route.js
 auth.controller.js
 
+
+## create middleware and function to handle possible error
 
