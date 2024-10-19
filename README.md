@@ -84,3 +84,6 @@ export default <model-name>;
 
 create model and controller seperately in api folder
 
+## creating signup api route
+
+
