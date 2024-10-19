@@ -49,6 +49,13 @@ export default function App() {
 npm run dev
 ```
 
-
-
 ## working on pages and routes
+
+creating pages like Home, About, Signin etc
+
+## Create Header Component
+using React-router-dom lib to create dynamic routing between pages
+created header component
+
+
+
