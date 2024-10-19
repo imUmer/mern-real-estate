@@ -94,3 +94,9 @@ auth.controller.js
 
 ## create middleware and function to handle possible error
 
+index.js 
+auth.route.js
+auth.controller.js 
+errorHandler
+utils > error.js
+
