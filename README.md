@@ -61,4 +61,27 @@ created header component
 install mongoose and setup the db
 created .env file, setup connection string there
 
+## creating model
+
+```
+import mongoose, { Schema } from 'mongoose'
+
+const <name-schema> = new Schema({
+    <attribute>: {
+        <type>: <datatype>,
+    },
+    .
+    .
+    .
+}, {timestamps: true});
+
+const <model-name> = mongoose.model('<model-name>', <model-name>);
+
+export default <model-name>;
+
+```
+
+## create and test API
+
+create model and controller seperately in api folder
 
