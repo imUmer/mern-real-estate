@@ -57,5 +57,8 @@ creating pages like Home, About, Signin etc
 using React-router-dom lib to create dynamic routing between pages
 created header component
 
+## Connecting Database
+install mongoose and setup the db
+created .env file, setup connection string there
 
 

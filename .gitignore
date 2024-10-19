@@ -1,1 +1,9 @@
 node_modules/
+.env
+• idea
+•DS_Store
+*- suo
+*.ntvs*
+*-njsproj
+*.sln
+*. SW?
