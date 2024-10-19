@@ -80,7 +80,6 @@ const <model-name> = mongoose.model('<model-name>', <model-name>);
 export default <model-name>;
 
 ```
-
 ## create and test API
 
 create model and controller seperately in api folder
