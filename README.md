@@ -86,4 +86,9 @@ create model and controller seperately in api folder
 
 ## creating signup api route
 
+create signup and routes for it.
+index.js 
+auth.route.js
+auth.controller.js
+
 
