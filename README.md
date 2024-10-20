@@ -51,7 +51,10 @@ npm run dev
 
 ## work on pages and routes
 
-creating pages like Home, About, Signin etc
+create pages folder and create pages 
+- Home 
+- About 
+- Signin etc
 
 ## Create Header Component
 using React-router-dom lib to create dynamic routing between pages
@@ -87,16 +90,22 @@ create model and controller seperately in api folder
 ## create signup api route
 
 create signup and routes for it.
-index.js 
-auth.route.js
-auth.controller.js
+- index.js 
+- auth.route.js
+- auth.controller.js
 
 
 ## create middleware and function to handle possible error
 
-index.js 
-auth.route.js
-auth.controller.js 
-errorHandler
-utils > error.js
+- index.js 
+- auth.route.js
+- auth.controller.js 
+- errorHandler
+- utils -> error.js
+
+## work on Sign up UI 
+
+- pages -> Signup.js
+
+
 
