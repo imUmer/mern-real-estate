@@ -107,5 +107,13 @@ create signup and routes for it.
 
 - pages -> Signup.js
 
+## work on Sign up functionality
+
+- pages -> Signup.js
+- make server proxy in vite.config
+- add data to mongodb and handle error 
+- loading while data added to db
+
+
 
 

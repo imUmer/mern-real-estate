@@ -26,6 +26,9 @@ export default function Header() {
           <Link to={'/signin'}>
           <li className="text-slate-700 hover:text-slate-500">Sign in</li>
           </Link>
+          <Link to={'/signup'}>
+          <li className="text-green-700 hover:text-green-500">Register</li>
+          </Link>
         </ul>
       </div>
     </header>
