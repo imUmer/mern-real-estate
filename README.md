@@ -140,3 +140,8 @@ create signup and routes for it.
 - npm i redux-persist
 - store.js - make persistConfig etc
 - main.js PersistGate - persistor 
+
+## Google OAuth functionality
+- OAuth button component
+- Firebase account 
+- conneted firebase with webapp
