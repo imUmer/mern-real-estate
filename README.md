@@ -129,8 +129,14 @@ create signup and routes for it.
 # Redux Toolkit
 
 ## redux store
+- npm i @reduxjs/toolkit react-redux
 - client -> redux -> store.js
 - main.js ->  
 - client -> redux -> -> user -> userSlice.js
 - useDispatch in Signin.js
 - use redux toolkit and redux
+
+## Redux persist + hold up date after refreshing the page 
+- npm i redux-persist
+- store.js - make persistConfig etc
+- main.js PersistGate - persistor 
