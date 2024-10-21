@@ -126,3 +126,11 @@ create signup and routes for it.
 ### Functionality
 - pages -> Signin.js just as Signup.js
 
+# Redux Toolkit
+
+## redux store
+- client -> redux -> store.js
+- main.js ->  
+- client -> redux -> -> user -> userSlice.js
+- useDispatch in Signin.js
+- use redux toolkit and redux
