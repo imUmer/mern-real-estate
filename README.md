@@ -114,6 +114,12 @@ create signup and routes for it.
 - add data to mongodb and handle error 
 - loading while data added to db 
 
+## work on Sign in functionality with route and hide feature
 
+- pages -> Signin.js
+- api -> controllers -> auth.controller.js - for email password validation 
+- env - path to T
+- api -> routes -> auth.routes.js - added route for signin
+- auth.controller.js ...rest to hide the password - 
 
 
