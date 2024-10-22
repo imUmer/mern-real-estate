@@ -149,3 +149,8 @@ create signup and routes for it.
 - api/routes/auth.route.js - add route for google in Back-End
 - api/controllers/auth.controller.js - add controller for google in Back-End
 
+## User profile in Header and private mode
+- src -> components -> Header.js
+- create PrivateRoute component   
+- create profile page 
+- handle redirect to sign-in when user is loged-out  
