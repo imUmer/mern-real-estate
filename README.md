@@ -148,3 +148,4 @@ create signup and routes for it.
 - add redux in OAuth.js
 - api/routes/auth.route.js - add route for google in Back-End
 - api/controllers/auth.controller.js - add controller for google in Back-End
+
