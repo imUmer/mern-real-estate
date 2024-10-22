@@ -145,3 +145,6 @@ create signup and routes for it.
 - OAuth button component
 - Firebase account 
 - conneted firebase with webapp
+- add redux in OAuth.js
+- api/routes/auth.route.js - add route for google in Back-End
+- api/controllers/auth.controller.js - add controller for google in Back-End
