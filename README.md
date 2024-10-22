@@ -154,3 +154,7 @@ create signup and routes for it.
 - create PrivateRoute component   
 - create profile page 
 - handle redirect to sign-in when user is loged-out  
+
+## User profile Ui
+- src -> pages -> Profile.jsx
+- Complete the profile page
