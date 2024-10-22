@@ -158,3 +158,9 @@ create signup and routes for it.
 ## User profile Ui
 - src -> pages -> Profile.jsx
 - Complete the profile page
+
+## Work on uploading image to profile
+- make image cliclable to change image using useRef hook
+- firebase storage
+  
+
