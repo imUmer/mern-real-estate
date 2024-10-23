@@ -169,3 +169,10 @@ create signup and routes for it.
 - user.route.js
 - cookie-parser
 - create verifyUser.js
+
+## Work on update user info in profile
+- Pages -> Profile.js update feature 
+- add updateUser functions in redux 
+- user.route.js
+- userRouter index.js
+
