@@ -164,4 +164,8 @@ create signup and routes for it.
 - firebase storage
 - maake uplaod image function
   
-
+## Work on update user info in profile
+- user.controller.js
+- user.route.js
+- cookie-parser
+- create verifyUser.js

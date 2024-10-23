@@ -62,8 +62,8 @@ export default function Profile() {
           hidden
           accept="image/*"
         />
-        <img
-          src={formData.avatar || currentUser.avatar}
+        <img 
+          src={formData.avatar ||   currentUser.avatar}
           onClick={() => fileRef.current.click()}
           alt="user avatar"
           className="rounded-full h-24 w-24 cursor-pointer self-center mt-2"
