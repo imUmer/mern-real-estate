@@ -195,9 +195,15 @@ create signup and routes for it.
 - listing.route.js
 - listing route path in index.js
 
+## Work on listing module
+- Profile button for route and create listing page 
+- create and style CreateListing.jsx page
+- added to a private route in App.js
 
 
 
+
+ 
 
 
 
