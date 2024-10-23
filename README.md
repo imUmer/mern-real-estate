@@ -171,8 +171,13 @@ create signup and routes for it.
 - create verifyUser.js
 
 ## Work on update user info in profile
-- Pages -> Profile.js update feature 
+- Pages -> Profile.jsx update feature 
 - add updateUser functions in redux 
 - user.route.js
 - userRouter index.js
 
+## Work on delete user 
+- user.routes.js
+- Profile.jsx 
+- delete user profile
+- delete cookie data in user.controller.js
