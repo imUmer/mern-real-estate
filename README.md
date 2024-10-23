@@ -181,3 +181,9 @@ create signup and routes for it.
 - Profile.jsx 
 - delete user profile
 - delete cookie data in user.controller.js
+
+## Work on signout user
+- sign out in Profile.jsx 
+- auth.routes.js make route for sign out
+- auth.controller.js to make controller for sign out
+- add redux functions 
