@@ -187,3 +187,18 @@ create signup and routes for it.
 - auth.routes.js make route for sign out
 - auth.controller.js to make controller for sign out
 - add redux functions 
+
+## Work on listing module
+- / api / controllers | routes | models -- create all 
+- listing.comtroller.js
+- listing.model.js
+- listing.route.js
+- listing route path in index.js
+
+
+
+
+
+
+
+
