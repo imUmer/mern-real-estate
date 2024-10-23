@@ -1,13 +1,21 @@
 import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
-import { getStorage, ref, uploadBytesResumable } from "firebase/storage";
+import {
+  getDownloadURL,
+  getStorage,
+  ref,
+  uploadBytesResumable,
+} from "firebase/storage";
 import { app } from "../firebase";
- 
+
 export default function Profile() {
   const { currentUser } = useSelector((state) => state.user);
   const fileRef = useRef(null);
   const [file, setFile] = useState(undefined);
-  console.log(file);
+  const [filePerc, setFilePerc] = useState(0);
+  const [fileUploadError, setFileUploadError] = useState(false);
+  const [formData, setFormData] = useState({});
+   
 
   useEffect(() => {
     if (file) {
@@ -18,14 +26,29 @@ export default function Profile() {
   const handleFileUpload = (file) => {
     const storage = getStorage(app);
     const fileName = new Date().getTime() + file.name;
-    const storageRef = ref(storage, fileName); 
-    const uploadTask = uploadBytesResumable(storageRef, file); 
+    const storageRef = ref(storage, fileName);
+    const uploadTask = uploadBytesResumable(storageRef, file);
 
-    uploadTask.on('state_changed', (snapshot) => {
-      const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      console.log('uplaod is', progress,'% done');
-      
-    })
+    uploadTask.on(
+      "state_changed",
+      (snapshot) => {
+        const progress =
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        // console.log('uplaod is', progress,'% done');
+        setFilePerc(Math.round(progress));
+      },
+      (error) => {
+        setFileUploadError(true);
+        console.log(error);
+        
+      },
+      () => {
+        getDownloadURL(uploadTask.snapshot.ref).then(
+          (downloadURL) => {
+          setFormData({ ...formData, avatar: downloadURL }) 
+      });
+      }
+    );
   };
 
   return (
@@ -40,11 +63,23 @@ export default function Profile() {
           accept="image/*"
         />
         <img
-          src={currentUser.avatar}
+          src={formData.avatar || currentUser.avatar}
           onClick={() => fileRef.current.click()}
           alt="user avatar"
           className="rounded-full h-24 w-24 cursor-pointer self-center mt-2"
         />
+        <p className="text-sm self-center">
+          {
+          fileUploadError ? 
+          <span className="text-red-700">Error Image Upload (image must less then 2mb)</span>
+          : filePerc > 0 && filePerc < 100 ? 
+          <span className="text-black">{`Uploading ${filePerc}%`}</span>
+          : filePerc === 100 ? 
+          <span className="text-green-700">Image upload successfully!!</span>
+          : ""
+          }
+
+        </p>
         <input
           autoComplete="username"
           type="text"

@@ -162,5 +162,6 @@ create signup and routes for it.
 ## Work on uploading image to profile
 - make image cliclable to change image using useRef hook
 - firebase storage
+- maake uplaod image function
   
 
