@@ -200,6 +200,11 @@ create signup and routes for it.
 - create and style CreateListing.jsx page
 - added to a private route in App.js
 
+## Work on listing module Ui
+- create Ui for listing page 
+
+## Work on listing images upload 
+- create handleImagesUrl function
 
 
 
