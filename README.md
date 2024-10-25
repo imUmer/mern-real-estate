@@ -215,12 +215,18 @@ create signup and routes for it.
 ## Work on showing user listing in profile
 - create show listing in user profile
 
-## Work on delete api route and functionality
+## Work on listing delete api route and functionality
 - create delete listing api route 
 - create delete functionality
 - listing.route.js
 - lsiting.controller.js
 - Profile.jsx
+
+## Work on listing edit api route and functionality
+- create update listing api route 
+- create UpdateListing.jsx page
+- add route to App.jsx page 
+- add useParams to get the data in the form
 
 
 
