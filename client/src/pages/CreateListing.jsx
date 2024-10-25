@@ -10,25 +10,46 @@ import { app } from "../firebase";
 export default function CreateListing() {
   const [files, setFiles] = useState([]);
   const [formData, setFormData] = useState({
-    imagesUrls: [],
+    imageUrls: [],
   });
-  console.log(formData);
-  
+  const [uploadImageError, setUploadImageError] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const [uploadingPrec, setUploadingPrec] = useState(0);
+
+  console.log(formData, files.length, formData.imageUrls.length);
 
   const handleImageSubmit = (e) => {
-    console.log('start');
-    
-    if (files.length > 0 && files.length < 7) {
+    setUploading(true);
+    if (files.length > 0 && files.length + formData.imageUrls.length < 7) {
       const promises = [];
-    console.log('inside the fun');
-      
+      console.log("inside the fun");
+
       for (let i = 0; i < files.length; i++) {
         promises.push(storeImages(files[i]));
       }
-      Promise.all(promises).then((urls) => {
-        setFormData({...formData, imagesUrls: formData.imagesUrls.concat(urls) });
-      });
+      Promise.all(promises)
+        .then((urls) => {
+          setFormData({
+            ...formData,
+            imageUrls: formData.imageUrls.concat(urls),
+          });
+          setUploadImageError(false);
+          setUploading(false);
+  })
+        .catch((error) => {
+    setUploading(false);
+    setUploadImageError("Image upload error (2 mb max/image)");
+        });
+    } else {
+      setUploadImageError("You can only upload 6 images per listing  ");
     }
+  };
+
+  const handleRemoveImage = (index) => {
+    setFormData({
+      ...formData,
+      imageUrls: formData.imageUrls.filter((_, i) => i !== index),
+    });
   };
 
   const storeImages = async (file) => {
@@ -43,6 +64,7 @@ export default function CreateListing() {
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           console.log(`Upload is ${progress}% Done!`);
+          setUploadingPrec(Math.round(progress));
         },
         (error) => {
           reject(error);
@@ -173,21 +195,45 @@ export default function CreateListing() {
           </p>
           <div className="flex gap-4 ">
             <input
-              onClick={(e) => setFiles(e.target.files)}
+              onChange={(e) => setFiles(e.target.files)}
               className="p-3 border border-gray-300 rounded w-full"
               type="file"
-              id="images "
-              accept="images/*"
+              id="images"
+              accept="image/*"
               multiple
             />
             <button
               type="button"
               onClick={handleImageSubmit}
-              className="p-3 border border-green-700 text-green-700 rounded uppercase hover:shadow-lg disabled:opacity-80"
+              disabled={uploading}
+              className="text-sm p-3 border border-green-700 text-green-700 rounded uppercase hover:shadow-lg disabled:opacity-80"
             >
-              Upload
+             { uploading ? `Uploading... (${uploadingPrec}%)` : 'Upload' } 
             </button>
           </div>
+          <p className="text-red-700 text-sm">
+            {uploadImageError && uploadImageError}
+          </p>
+          {formData.imageUrls.length > 0 &&
+            formData.imageUrls.map((url, index) => (
+              <div
+                key={url}
+                className="flex justify-between p-3 border items-center"
+              >
+                <img
+                  src={url}
+                  className="w-20 h-20 object-contain rounded-lg"
+                  alt="listing image"
+                />
+                <button
+                  type="button"
+                  onClick={() => handleRemoveImage(index)}
+                  className="p-3 text-red-700 rounded-lg hover:opacity-75 uppercase"
+                >
+                  Delete
+                </button>
+              </div>
+            ))}
           <button className="p-3 bg-slate-700 rounded text-white hover:opacity-95 disabled:opcaity-80 uppercase">
             Create Listing
           </button>

@@ -205,6 +205,8 @@ create signup and routes for it.
 
 ## Work on listing images upload 
 - create handleImagesUrl function
+- create handleRemoveImages function
+- create Loading effect
 
 
 
