@@ -213,6 +213,9 @@ create signup and routes for it.
 - create api for getting user listing 
 
  
+## Work on showing user listing in profile
+- create show listing in user profile
+
 
 
 
