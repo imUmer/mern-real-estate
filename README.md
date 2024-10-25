@@ -207,6 +207,7 @@ create signup and routes for it.
 - create handleImagesUrl function
 - create handleRemoveImages function
 - create Loading effect
+- create listing upload functionality
 
 
 
