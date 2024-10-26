@@ -228,6 +228,12 @@ create signup and routes for it.
 - add route to App.jsx page 
 - add useParams to get the data in the form
 
+## Work on detail listing page
+- image slider for listing page
+- create ImageSlider Component
+- create Title, address, description and prices etc
+
+
 
 
 
