@@ -233,6 +233,12 @@ create signup and routes for it.
 - create ImageSlider Component
 - create Title, address, description and prices etc
 
+## Work on contact owner in listing page
+- create message area 
+- create owner contact button 
+- create component contact textbox
+- create api for user authentication to get the owner contact details (user should login)
+- create contact template to send mail to owner
 
 
 

@@ -38,32 +38,36 @@ export const updateUser = async (req, res, next) => {
   }
 };
 
-
 export const deleteUser = async (req, res, next) => {
-  if(req.user.id !== req.params.id) return next(errorHandler(401,'Only delete you own account!'));
+  if (req.user.id !== req.params.id)
+    return next(errorHandler(401, "Only delete you own account!"));
   try {
-     await User.findByIdAndDelete(req.params.id);
-     res.clearCookie('access_token');
-     res.status(200).json('User has been deleted!');
+    await User.findByIdAndDelete(req.params.id);
+    res.clearCookie("access_token");
+    res.status(200).json("User has been deleted!");
   } catch (error) {
-    next(error)
+    next(error);
   }
-} 
+};
 
-
-export const getUserListing = async (req, res, next) => { 
-
-  if(req.user.id === req.params.id) 
-  {
+export const getUserListing = async (req, res, next) => {
+  if (req.user.id === req.params.id) {
     try {
-      const listing = await Listing.find({ userRef: req.params.id});
-     res.status(200).json(listing);
+      const listing = await Listing.find({ userRef: req.params.id });
+      res.status(200).json(listing);
     } catch (error) {
-      next(error)
+      next(error);
     }
+  } else return next(errorHandler(401, "You Only view you own listings!"));
+};
+
+export const getUser = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) return next(errorHandler(401, "User not found"));
+    const { password: pass, ...rest } = user._doc;
+    res.status(200).json(rest);
+  } catch (error) {
+    next(error);
   }
-  else return next(errorHandler(401,'You Only view you own listings!'));
-
-
-
-}
+};
