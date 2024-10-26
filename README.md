@@ -243,7 +243,9 @@ create signup and routes for it.
 ## Work on search listing route and Ui
 - create route and api for searchTerm
 - create functionality in Header.jsx
+- create Search.jsx page 
+- create route in App.jsx for search page
 
-
+## Working on submit search functionality
 
 
