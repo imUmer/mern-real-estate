@@ -247,5 +247,7 @@ create signup and routes for it.
 - create route in App.jsx for search page
 
 ## Working on submit search functionality
+- create onChange button to handle changes in form
+- create onSubmit button to submit the search query
 
 
