@@ -255,4 +255,7 @@ create signup and routes for it.
 - install lib => npm i -D @tailwindcss/line-clamp
 - update tailwind.config.js and added this lib in plugins require('@tailwindcss/line-clamp'),
 
+## show more button with functionality
+- Search.jsx
+- show more button with functionality
 
