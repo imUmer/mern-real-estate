@@ -250,4 +250,9 @@ create signup and routes for it.
 - create onChange button to handle changes in form
 - create onSubmit button to submit the search query
 
+## Working on search listing card
+- create card for listing view
+- install lib => npm i -D @tailwindcss/line-clamp
+- update tailwind.config.js and added this lib in plugins require('@tailwindcss/line-clamp'),
+
 

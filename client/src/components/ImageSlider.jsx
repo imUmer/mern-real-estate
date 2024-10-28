@@ -61,7 +61,7 @@ export default function ImageSlider({ slides }) {
         <div
           className="h-[550px] bg-no-repeat bg-center"
           style={{
-            backgroundImage: `url(${images[currentIndex]})`,
+            backgroundImage: `url(${images[currentIndex]} || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw9JzG9-BcR653gmoC2jhd7amrEj-HFzYWfQ&s')`,
             backgroundSize: "cover",
           }}
         ></div>
