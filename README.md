@@ -259,3 +259,8 @@ create signup and routes for it.
 - Search.jsx
 - show more button with functionality
 
+## work on home page 
+- Home.jsx
+- Landing page of website
+- imageSlider 
+- addes recent offer , sale and rent
