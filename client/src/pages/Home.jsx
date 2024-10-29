@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ImageSliderHome } from "../components/ImageSlider";
 import ListingItems from "../components/ListingItems";
-import Test from "../components/Test";
 
 export default function Home() {
   const [offerListings, setOfferListings] = useState([]);
