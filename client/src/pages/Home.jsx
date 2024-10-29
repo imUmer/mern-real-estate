@@ -70,14 +70,21 @@ export default function Home() {
         )}
       </div>
 
-      {/* offer listing section */} 
-      {/* <div className="mx-auto p-3 flex flex-col gap-8 my-10"> */}
-      <div className="flex flex-col gap-6 px-3 lg:max-w-6xl mx-auto">
+      {/* offer listing section */}
+
+      {/* <div className="p-7 flex flex-wrap gap-4 mx-auto ">
+        {offerListings &&
+          offerListings.length > 0 &&
+          offerListings.map((listing) => (
+            <ListingItems key={listing._id} listing={listing} />
+          ))}
+      </div> */}
+      <div className="p-3 flex flex-col gap-8 my-10 max-w-6xl mx-auto ">
+        {/* <div className="flex flex-col gap-6 p-3 max-w-full mx-auto"> */}
         {console.log(offerListings)}
         {offerListings && offerListings.length > 0 && (
-          
           <div className="">
-            <div className="my-3">
+            <div className="my-5">
               <h1 className="text-2xl font-semibold text-gray-600">
                 Recent Offers
               </h1>
@@ -88,7 +95,7 @@ export default function Home() {
                 Show more offers
               </Link>
             </div>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 ">
               {offerListings.map((listing) => (
                 <div>
                   <ListingItems listing={listing} key={listing._id} />

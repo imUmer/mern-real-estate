@@ -264,3 +264,8 @@ create signup and routes for it.
 - Landing page of website
 - imageSlider 
 - addes recent offer , sale and rent
+
+## work on about page Ui
+- About.jsx
+
+# Completed project  Ready for deployment
