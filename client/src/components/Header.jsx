@@ -27,7 +27,7 @@ export default function Header() {
     <header className="bg-slate-300 shadow-md">
       <div className="flex justify-between items-center max-w-6xl mx-auto p-2">
         <Link to={"/"}>
-          <h1 className="font-bold text-sm sm:text-xl flex flex-wrap ">
+          <h1 className="font-bold text-sm md:text-2xl flex flex-wrap">
             <span className="text-slate-400">Real</span>
             <span className="text-slate-500">eState</span>
           </h1>
