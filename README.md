@@ -268,4 +268,4 @@ create signup and routes for it.
 ## work on about page Ui
 - About.jsx
 
-# Completed project  Ready for deployment
+# Completed project  Ready for deployment _ v.1.0.0
