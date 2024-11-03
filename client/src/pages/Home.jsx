@@ -51,7 +51,7 @@ export default function Home() {
           <br />
           house with ease
         </h1>
-        <div className="text-gray-400 text-xs sm:text-sm">
+        <div className="text-gray-500 text-xs sm:text-sm">
           RealEstate is the Perfect place to find
           <br /> we have wide range of properties
         </div>
