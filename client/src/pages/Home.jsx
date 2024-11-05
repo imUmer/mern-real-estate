@@ -71,13 +71,6 @@ export default function Home() {
 
       {/* offer listing section */}
 
-      {/* <div className="p-7 flex flex-wrap gap-4 mx-auto ">
-        {offerListings &&
-          offerListings.length > 0 &&
-          offerListings.map((listing) => (
-            <ListingItems key={listing._id} listing={listing} />
-          ))}
-      </div> */}
       <div className="p-3 flex flex-col gap-8 my-10 max-w-6xl mx-auto ">
         {/* <div className="flex flex-col gap-6 p-3 max-w-full mx-auto"> */}
         {console.log(offerListings)}
